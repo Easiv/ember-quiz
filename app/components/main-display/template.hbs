@@ -1,10 +1,18 @@
 {{yield}}
-<h1>Question</h1>
+
+{{#each questions as |question|}}
+  <h1>Question: {{question.header}}</h1>
+  {{#each question.answers as |answer|}}
+    {{answer}}
+  {{/each}}
+{{/each}}
+
+{{#paper-button primary=true raised=true}}<h2>A</h2>Primary{{/paper-button}}
+{{#paper-button primary=true raised=true}}<h2>B</h2>Primary{{/paper-button}}
+{{#paper-button primary=true raised=true}}<h2>C</h2>Primary{{/paper-button}}
+{{#paper-button primary=true raised=true}}<h2>D</h2>Primary{{/paper-button}}
+
+<br>
 <button onClick={{action 'loadQuestion'}}>Click to load question</button>
 <br>
 <button onClick={{action 'createQuestion'}}>Click to create question</button>
-
-{{#each questions as |question|}}
-  {{question.header}}
-  {{question.answers}}
-{{/each}}

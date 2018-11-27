@@ -1,4 +1,9 @@
-<div class='nav'> Ember Quiz </div>
+<div class='nav'>
+  Ember Quiz
+  {{#link-to 'questions'}}{{#paper-button raised=true}}Questions{{/paper-button}}{{/link-to}}
+  {{#link-to 'questions.submit'}}{{#paper-button raised=true}}Submit Question{{/paper-button}}{{/link-to}}
+  {{#paper-button raised=true}}Help{{/paper-button}}
+</div>
 
 {{main-display questions=model}}
 
