@@ -1,0 +1,10 @@
+{{yield}}
+<h1>Question</h1>
+<button onClick={{action 'loadQuestion'}}>Click to load question</button>
+<br>
+<button onClick={{action 'createQuestion'}}>Click to create question</button>
+
+{{#each questions as |question|}}
+  {{question.header}}
+  {{question.answers}}
+{{/each}}
