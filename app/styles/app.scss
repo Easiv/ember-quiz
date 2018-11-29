@@ -1,3 +1,4 @@
+$primary: 'red';
 @import 'ember-paper';
 
 html, body {
@@ -31,4 +32,29 @@ html, body {
   left: 5%;
   border-right: 3px solid gray;
   border-bottom: 3px solid gray;
+}
+
+.submit-form {
+  padding: 5%;
+  position: relative;
+  margin-top: 3%;
+  bottom: 50%;
+  left: 5%;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border: 3px solid transparent;
+  box-shadow: 2px 2px grey;
+}
+
+.submit-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 3%;
+  font-size: 2em;
+}
+
+.submit-button {
+  margin-left: 94%;
 }

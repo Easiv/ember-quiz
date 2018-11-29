@@ -1,0 +1,24 @@
+<div class="submit-header">Submit your own question</div>
+
+<div class="layout layout-md-column">
+  {{paper-input class="flex-100" label="Question" primary=true value=title onChange=(action (mut title))}}
+</div>
+
+<div class="layout layout-sm-column">
+  {{paper-input class="flex-50" label="A" primary=true value=a onChange=(action (mut a))}}
+  {{paper-input class="flex-50" label="B" primary=true value=b onChange=(action (mut b))}}
+</div>
+
+<div class="layout layout-sm-column">
+  {{paper-input class="flex-50" label="C" primary=true value=c onChange=(action (mut c))}}
+  {{paper-input class="flex-50" label="D" primary=true value=d onChange=(action (mut d))}}
+</div>
+
+<div class="layout layout-sm-column">
+  {{paper-input class="flex-50" label="Correct Answer" primary=true placeholder="Type A, B, C or D" value=correct onChange=(action (mut correct))}}
+  {{paper-input class="flex-50" label="Answer additional text" primary=true value=customText onChange=(action (mut customText))}}
+</div>
+
+<div class="submit-button">
+  {{#paper-button raised=true primary=true}}Submit{{/paper-button}}
+</div>

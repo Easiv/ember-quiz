@@ -1,10 +1,10 @@
 <div class='nav'>
   {{#link-to 'application'}}<span class='nav-text'>Ember Quiz</span>{{/link-to}}
   {{#link-to 'questions'}}{{#paper-button raised=true}}Questions{{/paper-button}}{{/link-to}}
-  {{#link-to 'questions.submit'}}{{#paper-button raised=true}}Submit Question{{/paper-button}}{{/link-to}}
+  {{#link-to 'submit'}}{{#paper-button raised=true}}Submit Question{{/paper-button}}{{/link-to}}
   {{#paper-button raised=true}}Help{{/paper-button}}
 </div>
 
-{{main-display questions=model}}
-
 {{outlet}}
+
+
