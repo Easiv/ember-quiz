@@ -17,7 +17,7 @@ export default Component.extend({
         correct: this.correct,
         customText: this.customText
       }).save().then(() => {
-        this.actions.redirect();
+        console.log('submitted')
       });
     },
 

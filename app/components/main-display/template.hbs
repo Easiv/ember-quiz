@@ -1,16 +1,13 @@
 {{yield}}
 
-{{#each questions as |question|}}
-  <h1>Question: {{question.header}}</h1>
-  {{#each question.answers as |answer|}}
-    {{answer}}
-  {{/each}}
+{{#each questions as |question index|}}
+  <h1>Question {{increment index}}: {{question.title}}</h1>
+    {{#paper-button onClick=(action 'answerQuestion' question.a question.correct) primary=true raised=true}}<h2>A: {{question.a}}</h2>{{/paper-button}}
+    {{#paper-button onClick=(action 'answerQuestion' question.b question.correct) primary=true raised=true}}<h2>B: {{question.b}}</h2>{{/paper-button}}
+    {{#paper-button onClick=(action 'answerQuestion' question.c question.correct) primary=true raised=true}}<h2>C: {{question.c}}</h2>{{/paper-button}}
+    {{#paper-button onClick=(action 'answerQuestion' question.d question.correct) primary=true raised=true}}<h2>D: {{question.d}}</h2>{{/paper-button}}
+    <h2>{{question.correct}}</h2>
 {{/each}}
-
-{{#paper-button primary=true raised=true}}<h2>A</h2>{{/paper-button}}
-{{#paper-button primary=true raised=true}}<h2>B</h2>{{/paper-button}}
-{{#paper-button primary=true raised=true}}<h2>C</h2>{{/paper-button}}
-{{#paper-button primary=true raised=true}}<h2>D</h2>{{/paper-button}}
 
 <br>
 <button onClick={{action 'loadQuestion'}}>Click to load question</button>

@@ -18,6 +18,14 @@ export default Component.extend({
         customResponse: 'how could u not know it'
       });
       question.save().then(() => console.log('good')).catch(e => console.log(e));
+    },
+
+    answerQuestion(answer, correct) {
+      if(answer === correct) {
+        console.log(true)
+      } else {
+        console.log(false)
+      }
     }
   }
 });
